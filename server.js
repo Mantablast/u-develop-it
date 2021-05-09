@@ -25,3 +25,16 @@ db.connect(err => {
     console.log(`Server running on port ${PORT}`);
   });
 });
+
+
+//Cool to know
+//you might find useful include the following:
+
+// -- get all voters who do not have a last name of Cooper or Jarman
+// SELECT * FROM voters WHERE last_name != 'Cooper' AND last_name != 'Jarman';
+
+// -- get all voters who have a .edu email address
+// SELECT * FROM voters WHERE email LIKE '%.edu';
+
+// -- get only the last created voter
+// SELECT * FROM voters ORDER BY created_at DESC LIMIT 1;
